@@ -2,6 +2,39 @@
 ====
 * Using Interrupts
 * Use the Core Timer
+
+``` C
+// CoreTimer demo1 : demonstrates a simple callback scheduled at
+// a single frequency (20Hz). This example code is in the public domain.
+// This example blinks the on-board LED at 20Hz from a CoreTimer
+// callback function. In the callback function, you return an unsigned
+// int that represents when, in the future, you want to get called again.
+
+void setup() 
+{
+  pinMode(PIN_LED1, OUTPUT);
+  attachCoreTimerService(MyCallback);
+}
+
+// We don't need to do anything in the main loop
+void loop() 
+{
+}
+
+// For the core timer callback, just toggle the output high and low
+// and schedule us for another 50ms in the future. CORE_TICK_RATE
+// is the number of core timer counts in 1 millisecond. So if we 
+// want this callback to be called every 50ms, we just multiply 
+// the CORE_TICK_RATE by 50, and add it to the current time.
+// currentTime is the core timer clock value at the moment we get
+// called.
+uint32_t MyCallback(uint32_t currentTime) 
+{
+  digitalWrite(PIN_LED1, !digitalRead(PIN_LED1));
+  return (currentTime + (CORE_TICK_RATE * 50));
+}
+```
+
 * Use the on board button and LED
 
 ``` C
