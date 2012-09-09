@@ -8,7 +8,7 @@
 This code is a simple example of how to use Serial (USB serial), Serial0 (with RX on pin 8 and TX on pin 9) and Serial1 (with RX on pin 28 and TX on pin 29) for both input and output in a sketch. 
 
 ``` C
-// UART test for Fubarin SD board
+// UART test for Fubarino SD board
 // Test out USB Serial and two hardware UARTs
 // Use FTDI or other USB to serial cable with PC and
 // terminal emulator for the two hardware UARTs
