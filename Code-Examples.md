@@ -3,6 +3,41 @@
 * Using Interrupts
 * Use the Core Timer
 * Use the on board button and LED
+
+``` C
+// This sketch demonstrates how to blink the on-board LED
+// and read the on-board button. When you run the sketch,
+// The LED will blink slowly until you hold down the PRG
+// button. Then it will blink fast.
+
+// Controls the LED blink speed, in ms
+int LedSpeed = 1000;
+
+void setup()
+{
+  // Set up our two pins of interest
+  digitalWrite(PIN_LED1, LOW);
+  pinMode(PIN_LED1, OUTPUT);
+  pinMode(PIN_BTN1, INPUT);
+}
+
+void loop()
+{
+  digitalWrite(PIN_LED1, HIGH);
+  delay(LedSpeed);
+  digitalWrite(PIN_LED1, LOW);
+  delay(LedSpeed);
+  if (digitalRead(PIN_BTN1) == 1)
+  {
+    LedSpeed = 1000;
+  }
+  else
+  {
+    LedSpeed = 50;
+  }
+}
+```
+
 * Use the two built-in hardware UART (serial) ports
 
 This code is a simple example of how to use Serial (USB serial), Serial0 (with RX on pin 8 and TX on pin 9) and Serial1 (with RX on pin 28 and TX on pin 29) for both input and output in a sketch. 
