@@ -1,6 +1,49 @@
 #Code Example
 ====
 * Using Interrupts
+
+``` C
+// This sketch shows one way to use an external interrupt pin on
+// the Fubarino SD board. (There are 5 external interrupts on PIC32:
+// INT0 = Pin4, INT1 = Pin0, INT2 = Pin1, INT3 = Pin2, INT4 = Pin3)
+// To run this test, you must take a wire and connect pin 12 to
+// pin 0 (INT1). We then toggle pin 12 as an output to stimulate
+// an external interrupt occuring on pin 0 (INT1).
+// When a RISING edge is detected on INT1 (pin0), the attached
+// function (intButton()) will get called. In that function we
+// toggle the LED. So if you have the wire from pin 12 to pin 0,
+// and you run this sketch, you should see the LED blinking.
+
+#define pinSrc 12 // used as external interrupt stimulator
+#define pinInt PIN_INT1  // The extern interrupt we choose to use (pin0)
+
+void intHandle();
+
+void setup() 
+{
+  digitalWrite(PIN_LED1, LOW);      // Start of with LED off
+  pinMode(PIN_LED1, OUTPUT);        // Make LED pin an output
+  pinMode(pinInt, INPUT);           // Interrupt pin must be an input
+  digitalWrite(pinSrc, LOW);        // Simulator pin must start low
+  pinMode(pinSrc, OUTPUT);          // And stim pin must be output too
+  attachInterrupt(1, intHandle, RISING); // Register interrupt function on Int1
+}
+
+void loop() 
+{
+   digitalWrite(pinSrc, HIGH);      // Set stim pin high (triggers interrupt)
+   delay(500);                      // wait half a second
+   digitalWrite(pinSrc, LOW);       // Set stim pin low
+   delay(500);                      // wait another half second
+}
+
+// This function gets called when an external interrupt occurs
+void intHandle() 
+{
+  digitalWrite(PIN_LED1, !digitalRead(PIN_LED1));
+}
+```
+
 * Use the Core Timer
 
 ``` C
