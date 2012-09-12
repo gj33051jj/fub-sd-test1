@@ -152,3 +152,56 @@ void loop() {
   delay(200);
 }
 ```
+
+* Reading analog inputs
+
+``` C
+// This simple sketch reads all 15 analog inputs on the Fubarino SD
+// and prints them out to the USB seiral port as voltages (from 
+// 0.0 to 3.3 V
+
+void setup() {
+  Serial.begin(115200);
+  delay(5000);
+}
+
+float ADCConvert(uint16_t data)
+{
+  return(((float)data/1024)*3.3); 
+}
+
+void loop() {
+  Serial.print(ADCConvert(analogRead(A0)));
+  Serial.print(" ");
+  Serial.print(ADCConvert(analogRead(A1)));
+  Serial.print(" ");
+  Serial.print(ADCConvert(analogRead(A2)));
+  Serial.print(" ");
+  Serial.print(ADCConvert(analogRead(A3)));
+  Serial.print(" ");
+  Serial.print(ADCConvert(analogRead(A4)));
+  Serial.print(" ");
+  Serial.print(ADCConvert(analogRead(A5)));
+  Serial.print(" ");
+  Serial.print(ADCConvert(analogRead(A6)));
+  Serial.print(" ");
+  Serial.print(ADCConvert(analogRead(A7)));
+  Serial.print(" ");
+  Serial.print(ADCConvert(analogRead(A8)));
+  Serial.print(" ");
+  Serial.print(ADCConvert(analogRead(A9)));
+  Serial.print(" ");
+  Serial.print(ADCConvert(analogRead(A10)));
+  Serial.print(" ");
+  Serial.print(ADCConvert(analogRead(A11)));
+  Serial.print(" ");
+  Serial.print(ADCConvert(analogRead(A12)));
+  Serial.print(" ");
+  Serial.print(ADCConvert(analogRead(A13)));
+  Serial.print(" ");
+  Serial.print(ADCConvert(analogRead(A14)));
+  Serial.print(" ");
+  Serial.println(" ");
+  delay(1000);
+}
+```
