@@ -12,6 +12,6 @@
 
 ##On Board LED
 * PIN_LED1 defined as pin 21 
-* `pinMode(PIN_LED1, OUTPUT);`
+* To enable: `pinMode(PIN_LED1, OUTPUT);`
   
 
