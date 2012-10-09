@@ -6,4 +6,4 @@
 * [Code Examples] (wiki/Code-Examples)
 * [Eagle 6.0 Library](https://github.com/EmbeddedMan/SchmalzHausEagleLibs) for Fubarino SD
 * [SD Board Features] (wiki/SD-Board-Features)
-* [Fubarino SD Performance] (wiki/Fubarino-SD-Perormance)
+* [Fubarino SD Performance] (wiki/Fubarino-SD-Performance)
