@@ -1,7 +1,7 @@
 # Where are we going with the Fubarino Project
 ====
-* Fubarino SD
-* Fubarino Mini
+* FubarinoSD
+* FubarinoMini
 * Fubarino Adapter Shield
 * Fubarino Fubotix Robot Controller
 
