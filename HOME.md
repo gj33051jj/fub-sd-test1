@@ -4,6 +4,6 @@
 * [Issue Tracking](https://github.com/fubarino/fubarino/issues) 
 * [How do I] (wiki/How-do-I)
 * [Code Examples] (wiki/Code-Examples)
-* [Eagle 6.0 Library](https://github.com/EmbeddedMan/SchmalzHausEagleLibs) for Fubarino SD
+* [Eagle 6.0 Library](https://github.com/EmbeddedMan/SchmalzHausEagleLibs) for FubarinoSD
 * [SD Board Features] (wiki/SD-Board-Features)
-* [Fubarino SD Performance] (wiki/Fubarino-SD-Performance)
+* [FubarinoSD Performance] (wiki/Fubarino-SD-Performance)
