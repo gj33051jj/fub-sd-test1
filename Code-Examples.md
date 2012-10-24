@@ -4,7 +4,7 @@
 
 ``` C
 // This sketch shows one way to use an external interrupt pin on
-// the Fubarino SD board. (There are 5 external interrupts on PIC32:
+// the FubarinoSD board. (There are 5 external interrupts on PIC32:
 // INT0 = Pin4, INT1 = Pin0, INT2 = Pin1, INT3 = Pin2, INT4 = Pin3)
 // To run this test, you must take a wire and connect pin 12 to
 // pin 0 (INT1). We then toggle pin 12 as an output to stimulate
@@ -119,7 +119,7 @@ void loop()
 This code is a simple example of how to use Serial (USB serial), Serial0 (with RX on pin 8 and TX on pin 9) and Serial1 (with RX on pin 28 and TX on pin 29) for both input and output in a sketch. 
 
 ``` C
-// UART test for Fubarino SD board
+// UART test for FubarinoSD board
 // Test out USB Serial and two hardware UARTs
 // Use FTDI or other USB to serial cable with PC and
 // terminal emulator for the two hardware UARTs
@@ -156,7 +156,7 @@ void loop() {
 * Reading analog inputs
 
 ``` C
-// This simple sketch reads all 15 analog inputs on the Fubarino SD
+// This simple sketch reads all 15 analog inputs on the FubarinoSD
 // and prints them out to the USB seiral port as voltages (from 
 // 0.0 to 3.3 V
 
