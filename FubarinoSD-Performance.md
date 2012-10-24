@@ -1,4 +1,4 @@
-The Fubarino SD is a very fast board. The processor runs at 80MHz and because it is 32bits can do quite a bit of work on each cycle. This page documents some performance numbers that you can use when deciding if Fubarino SD is the right tool for your project.
+The FubarinoSD is a very fast board. The processor runs at 80MHz and because it is 32bits can do quite a bit of work on each cycle. This page documents some performance numbers that you can use when deciding if FubarinoSD is the right tool for your project.
 
 ## SD Card Read/Write
 
