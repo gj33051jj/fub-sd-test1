@@ -5,5 +5,5 @@
 * [How do I] (wiki/How-do-I)
 * [Code Examples] (wiki/Code-Examples)
 * [Eagle 6.0 Library](https://github.com/EmbeddedMan/SchmalzHausEagleLibs) for FubarinoSD
-* [SD Board Features] (wiki/SD-Board-Features)
+* [SD Board Pin Features] (wiki/SD-Board-Features)
 * [FubarinoSD Performance] (wiki/Fubarino-SD-Performance)
