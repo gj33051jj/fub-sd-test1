@@ -25,6 +25,9 @@ NOTE (From the ChipKit Wiki):
 | SPI Pin | SPI Label|
 |:---:|:----:|
 |24|SCK, SCLK, CLK|
+|25|SDI, MOSI|
+|26|SDO, MISO|
+|27|SS, CS|
 
 
 The SPI interface on AVR microcontrollers uses four signals labeled SS (slave select), MISO (master in/slave out), MOSI (master out/slave in) and SCK (serial clock). On AVR microcontrollers, MISO and MOSI switch direction depending on whether the SPI controller is enabled in master mode or slave mode.
