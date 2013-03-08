@@ -33,7 +33,7 @@ with:
 
 `#T0:23:respawn:/sbin/getty -L ttyAMA0 115200 vt100`
 
-1. Remove console error debugging
+2. Remove console error debugging
 
 Remove:
 `console=ttyAMA0,115200 kgdboc=ttyAMA0,115200 
