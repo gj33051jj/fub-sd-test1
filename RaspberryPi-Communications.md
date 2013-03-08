@@ -36,6 +36,7 @@ with:
 2. Remove console error debugging
 
 Remove:
+
 `console=ttyAMA0,115200 kgdboc=ttyAMA0,115200 
 `
 From:
@@ -43,6 +44,7 @@ From:
 `dwc_otg.lpm_enable=0 console=ttyAMA0,115200 kgdboc=ttyAMA0,115200 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 elevator=deadline rootwait`
 
 Leaving:
+
 `
 dwc_otg.lpm_enable=0 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 elevator=deadline rootwait
 `
