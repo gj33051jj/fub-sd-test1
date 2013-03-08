@@ -52,7 +52,7 @@ dwc_otg.lpm_enable=0 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 elevator=d
 ##Done
 ====
 
-The above information was deried from the following information is what I did following the directions at Hobby Tronics [RaspberryPi Serial Port Configuration](http://www.hobbytronics.co.uk/raspberry-pi-serial-port).
+The above information was derived from the following information is what I did following the directions at Hobby Tronics [RaspberryPi Serial Port Configuration](http://www.hobbytronics.co.uk/raspberry-pi-serial-port).
 
 
 
