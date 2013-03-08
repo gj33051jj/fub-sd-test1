@@ -26,20 +26,20 @@ The wiring is now complete, but the default configuration of the RaspberryPI ser
 1. Edit /etc/inittab
 
 Replace:
-`
-T0:23:respawn:/sbin/getty -L ttyAMA0 115200 vt100
-`
-with:
-`
-#T0:23:respawn:/sbin/getty -L ttyAMA0 115200 vt100
-`
 
-2. Remove console error debugging
+`T0:23:respawn:/sbin/getty -L ttyAMA0 115200 vt100`
+
+with:
+
+`#T0:23:respawn:/sbin/getty -L ttyAMA0 115200 vt100`
+
+1. Remove console error debugging
 
 Remove:
 `console=ttyAMA0,115200 kgdboc=ttyAMA0,115200 
 `
 From:
+
 `dwc_otg.lpm_enable=0 console=ttyAMA0,115200 kgdboc=ttyAMA0,115200 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 elevator=deadline rootwait`
 
 Leaving:
