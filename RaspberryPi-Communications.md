@@ -18,10 +18,38 @@ For Serial the Fubarino SD you can use pins 8rx,9tx or pins 28rx, 29tx and conne
 
 Then load a simple Hello World sketch that prints "Hello World 0|1" to Serial0, or Serial1 depending on which port is wired to RaspberrPi GPIO pins 8,10.
 
-The wiring is now complete, but the default configuration of the serial port is be used as an alternative system console. You will need to disable all of that. The following information is what I did following the directions at Hobby Tronics [RaspberryPi Serial Port Configuration](http://www.hobbytronics.co.uk/raspberry-pi-serial-port).
+##Configure the RaspberryPI
+====
+
+The wiring is now complete, but the default configuration of the RaspberryPI serial port is be used as an alternative system console. You will need to disable all of that. 
+1. Edit /etc/inittab
+Replace:
+`
+T0:23:respawn:/sbin/getty -L ttyAMA0 115200 vt100
+`
+with:
+`
+#T0:23:respawn:/sbin/getty -L ttyAMA0 115200 vt100
+`
+
+2. Remove console error debugging
+Remove:
+`console=ttyAMA0,115200 kgdboc=ttyAMA0,115200 
+`
+From:
+`dwc_otg.lpm_enable=0 console=ttyAMA0,115200 kgdboc=ttyAMA0,115200 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 elevator=deadline rootwait`
+
+Leaving:
+`
+dwc_otg.lpm_enable=0 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 elevator=deadline rootwait
+`
+
+##Done
+====
+
+The above information was deried from the following information is what I did following the directions at Hobby Tronics [RaspberryPi Serial Port Configuration](http://www.hobbytronics.co.uk/raspberry-pi-serial-port).
 
 
 
 
  
-
