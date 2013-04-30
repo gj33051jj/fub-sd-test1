@@ -1,4 +1,4 @@
 #  Products
-* [FubarinoSD] []
-* FubarinoMini
-* FubarStep
+* [FubarinoSD] (FubarinoSD)
+* FubarinoMini (FubarinoMini)
+* FubarStep (FubarStep)
