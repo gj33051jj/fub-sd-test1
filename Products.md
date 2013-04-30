@@ -1,4 +1,6 @@
 #  Products
+##Boards
 * [FubarinoSD] (FubarinoSD)
-* FubarinoMini (FubarinoMini)
-* FubarStep (FubarStep)
+* [FubarinoMini] (FubarinoMini)
+##Accessories
+* [FubarStep] (FubarStep)
