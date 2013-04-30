@@ -1,9 +1,6 @@
 # Fubarino Wiki all things Fubarino
 ====
-## Products
-* [FubarinoSD]
-* [FubarinoMini]
-* [FubarStep]
+
 * [Manual] (https://github.com/fubarino/fubarino.github.com/blob/master/sd/docs/FubarinoSDURefManual.pdf)
 * [Road Map] (wiki/Road-Map)
 * [Issue Tracking](https://github.com/fubarino/fubarino/issues) 
