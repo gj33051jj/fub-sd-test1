@@ -7,7 +7,8 @@
 * UART2: On board serial2 pins 26rx, 25tx: Serial1.begin()
 
 ##PRG Button
-* PIN_BTN1 defined to access the PRG Button
+* PIN_BTN1 defined as pin 16
+* PIN_BTN1 is labeled the PRG Button
 * To enable: `pinMode(PIN_BTN1, INPUT);`
 
 ##On Board LED
