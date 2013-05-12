@@ -14,6 +14,7 @@
 ##FubarinoMini
 * [Manual] (https://github.com/fubarino/fubarino.github.com/blob/master/mini/docs/FubarinoMiniUserRefManual.pdf)
 * [Eagle 6.0 Library](https://github.com/fubarino/fubarino.github.com/blob/master/mini/v15) for Fubarino Mini v1.5
+* [Fubarino Mini Board Peripheral Pin Select] (wiki/Fubarino-Mini-pps)
 * [Fubarino Mini Board Pin Features] (wiki/Fubarino-Mini-Board-Pin-Features)
 * [Fubarino Mini Performance] (wiki/Fubarino-Mini-Performance)
 
