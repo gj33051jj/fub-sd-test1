@@ -3,7 +3,7 @@
 * [Road Map] (wiki/Road-Map)
 
 ##Issue Tracking and Reporting
-* [Issue Tracking](https://github.com/fubarino/fubarino/issues) 
+* [Issue Tracking](https://github.com/fubarino/fubarino.github.com/issues) 
 
 ##FubarinoSD
 * [Manual] (https://github.com/fubarino/fubarino.github.com/blob/master/sd/docs/FubarinoSDURefManual.pdf)
