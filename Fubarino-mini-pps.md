@@ -1,8 +1,32 @@
 PPS General Info
 ===
+The PIC32MX1xx and PIC32MX2xx family of parts have a peripheral called the Peripheral Pin Select (PPS) that allows you to change which pins certain functions inside the chip map to. This applies to inputs and outputs. Every pin can be a GPIO (General Purpose Input or Output) - i.e. a digital output or digital input. Most pins also have alternative functions that you can turn on - either fixed functions like I2C that can not be re-mapped to different pins, or functions like UART or PWM that can be re-mapped using the PPS.
+
+The Fubarino Mini, along with the Digilent DP32, both use MCUs that have PPS support. It is very important to understand that for some peripherals, you MUST map them using PPS to pins before you can use them. They are not, by default, set up to be mapped on boot. Over time, this may change, as the core library code for MPIDE is updated to have default pins on boot for every peripheral. Currently only the UARTs are automatically mapped. All other PPS-enabled-peripherals must be mapped before they can be used.
+
+The MPIDE core library code contains some functions and defines that you can use to make PPS mapping very simple - at least much simpler than trying to set up all of the registers yourself! The main function you will use is 
+
+```
+mapPps(pin, function);
+```
+
+The <pin> argument to this function is an "Arduino Pin Number". This is the pin number that you normally supply to functions like digitalWrite(), etc. 
+
+The <function> argument is one of a list of constants that specify which actual peripherals function you are mapping to that pin. For example, PPS_OUT_OC1 for mapping the Output Compare 1 (for PMW output for example).
+
+The mapPps() function is used to map both inputs and outputs to the pins. There are some important restrictions to understand about how PPS works. 
+
+1) There are up to eight I/O pins that any particular <function> can legally be mapped to. So you only get a small sub-set of the various I/O pins to choose from, and for each group of peripherals they are different.
+
+2) Although in hardware, a single peripheral output function can be mapped to multiple (up to 8) actual output pins at once, the current MPIDE mapPps() code does not support this.
+
+3) Although in hardware, a single input pin can be mapped to multiple (up to 8) actual peripheral input functions at once, the current MPIDE mapPps() code does not support this.
+
+What 2) and 3) above mean is that mapPps() creates a 1:1 link between an Arduino Pin Number and a peripheral function inside the MCU. Each Arduino Pin Number can only be mapped to a single function, which is either an input or an output. Normally this restriction will not cause any problems. Only in very rare cases would a many-to-one mapping be required. 
+
 The key to the whole deal is the proper chapter in the [datasheet (section 11.3)](http://ww1.microchip.com/downloads/en/DeviceDoc/61168E.pdf) put together with the ppsFunctionType enum in p32_defs.h.
 
-On boot, all pins are set to be PPS_OUT_GPIO. To make a different peripheral come out of a particular pin, you have to call
+On boot, all pins are set to be PPS_OUT_GPIO except for UART pins. To make a different peripheral come out of a particular pin, you have to call
 
 ```
 mapPps(pin, function);
