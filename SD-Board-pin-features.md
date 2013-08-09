@@ -1,5 +1,4 @@
-#Board Features
-====
+
 
 ##Serial Options
 * USB serial init: Serial.begin()
@@ -16,6 +15,9 @@
 
 ##PWM Pins
 * The Pins are 4,7,8,9,10
+
+##I2C
+* The pins are 1,2 and 29,28
 
 ##SPI
 * The SPI pins are: 24, 25, 26, 27
