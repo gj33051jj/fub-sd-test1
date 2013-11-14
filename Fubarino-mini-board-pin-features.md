@@ -5,7 +5,14 @@
 * USB serial init: Serial.begin()
 * UART1: On board serial1 pins 17rx, 18tx: Serial0.begin()
 * UART2: On board serial2 pins 26rx, 25tx: Serial1.begin()
-_In the manual, RX and TX are reverse from this. Why?_
+
+_In the manual, RX and TX are reverse from this._
+In Boards_def.h, there is:
+#define	_SER0_TX_OUT	PPS_OUT_U1TX
+#define	_SER0_TX_PIN	17
+#define	_SER0_RX_IN		PPS_IN_U1RX
+#define	_SER0_RX_PIN	18
+_The manual seems to be OK and above seems to be false!_
 
 ##PRG Button
 * PIN_BTN1 defined as pin 16
