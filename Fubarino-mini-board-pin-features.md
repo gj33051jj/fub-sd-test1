@@ -5,6 +5,7 @@
 * USB serial init: Serial.begin()
 * UART1: On board serial1 pins 17rx, 18tx: Serial0.begin()
 * UART2: On board serial2 pins 26rx, 25tx: Serial1.begin()
+_In the manual, RX and TX are reverse from this. Why?_
 
 ##PRG Button
 * PIN_BTN1 defined as pin 16
