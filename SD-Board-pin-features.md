@@ -1,4 +1,3 @@
-
 ##Serial Options
 * USB serial init: Serial.begin()
 * On board serial1 pins 8rx, 9tx: Serial0.begin()
@@ -16,10 +15,13 @@
 * The Pins are 4,7,8,9,10
 
 ##I2C
+Pins 1 & 2 are the default I2C interface for the TwoWire (Wire.h) library.
+
 * SDA1: 1
 * SCL1: 2
 * SDA2: 28
 * SCL2: 29
+
 The pins are 1,2 and 29,28
 
 ##SPI
