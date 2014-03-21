@@ -33,7 +33,7 @@ The wiring is now complete, but the default configuration of the RaspberryPI ser
 
 ##Now test from Raspberry PI
 1. Reboot
-2. screen /dev/ttyAMA0
+2. `screen /dev/ttyAMA0`
 
 If you don't have screen:
 `sudo apt-get install screen`
