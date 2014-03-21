@@ -1,4 +1,4 @@
-##Connecting the Raspberry PI to the Fubarino serial ports
+###Connecting the Raspberry PI to the Fubarino serial ports
 
 The RaspberryPi uses 3.3v logic and so does the ChipKit Fubarino SD board. The RaspberryPi conveniently has power, ground, tx, and rx pins right next to each on the GPIO pins.
 
