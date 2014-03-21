@@ -18,8 +18,8 @@ Then load a simple Hello World sketch that prints "Hello World 0|1" to Serial0, 
 The wiring is now complete, but the default configuration of the RaspberryPI serial port is be used as an alternative system console. You will need to disable all of that. 
 
 1. Edit /etc/inittab
-        `sudo vi /etc/inittab'
-        Replace:
+    `sudo vi /etc/inittab'
+    Replace:
         `T0:23:respawn:/sbin/getty -L ttyAMA0 115200 vt100`
         with:
         `#T0:23:respawn:/sbin/getty -L ttyAMA0 115200 vt100`
