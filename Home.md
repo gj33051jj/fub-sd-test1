@@ -21,5 +21,5 @@
 ##Tutorials
 * [How do I] (wiki/How-do-I)
 * [Code Examples] (wiki/Code-Examples)
-* [Fubarino and RaspberryPI] (wiki/RaspberryPi-Communications)
+* [Fubarino and RaspberryPI] (wiki/Fubarino-meet-Raspberry-PI)
 * [Arduino 1.x library issues and fixes](wiki/Arduino 1.x-library-issues-and-fixes)
