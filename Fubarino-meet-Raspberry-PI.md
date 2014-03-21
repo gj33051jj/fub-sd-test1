@@ -18,15 +18,15 @@ Then load a simple Hello World sketch that prints "Hello World 0|1" to Serial0, 
 The wiring is now complete, but the default configuration of the RaspberryPI serial port is be used as an alternative system console. You will need to disable all of that. 
 
 1. Edit /etc/inittab
-    ** `sudo vi /etc/inittab'
-    ** Replace: `T0:23:respawn:/sbin/getty -L ttyAMA0 115200 vt100`
-    ** With: `#T0:23:respawn:/sbin/getty -L ttyAMA0 115200 vt100`
+    * `sudo vi /etc/inittab'
+    * Replace: `T0:23:respawn:/sbin/getty -L ttyAMA0 115200 vt100`
+    * With: `#T0:23:respawn:/sbin/getty -L ttyAMA0 115200 vt100`
 2. Remove console error debugging from 
-    ** `sudo vi /boot/cmdline.txt`
-    ** Remove: `console=ttyAMA0,115200 kgdboc=ttyAMA0,115200`
-    ** From:
+    * `sudo vi /boot/cmdline.txt`
+    * Remove: `console=ttyAMA0,115200 kgdboc=ttyAMA0,115200`
+    * From:
     ```dwc_otg.lpm_enable=0 console=ttyAMA0,115200 kgdboc=ttyAMA0,115200 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 elevator=deadline rootwait```
-    ** Leaving:
+    * Leaving:
     ```dwc_otg.lpm_enable=0 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 elevator=deadline rootwait```
 3. Reboot the Raspberry PI
 
