@@ -1,4 +1,3 @@
-
 ##Connecting the Raspberry PI to the Fubarino serial ports
 
 The RaspberryPi uses 3.3v logic and so does the ChipKit Fubarino SD board. The RaspberryPi conveniently has power, ground, tx, and rx pins right next to each on the GPIO pins.
@@ -19,6 +18,7 @@ Then load a simple Hello World sketch that prints "Hello World 0|1" to Serial0, 
 The wiring is now complete, but the default configuration of the RaspberryPI serial port is be used as an alternative system console. You will need to disable all of that. 
 
 1. Edit /etc/inittab
+`sudo vi /etc/inittab'
 
 Replace:
 
@@ -28,8 +28,9 @@ with:
 
 `#T0:23:respawn:/sbin/getty -L ttyAMA0 115200 vt100`
 
-2. Remove console error debugging
-
+2. Remove console error debugging from 
+`sudo vi /boot/cmdline.txt`
+ 
 Remove:
 
 `console=ttyAMA0,115200 kgdboc=ttyAMA0,115200`
