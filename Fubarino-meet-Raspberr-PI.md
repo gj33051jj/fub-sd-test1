@@ -19,33 +19,29 @@ The wiring is now complete, but the default configuration of the RaspberryPI ser
 
 1. Edit /etc/inittab
 `sudo vi /etc/inittab'
-
 Replace:
-
 `T0:23:respawn:/sbin/getty -L ttyAMA0 115200 vt100`
-
 with:
-
 `#T0:23:respawn:/sbin/getty -L ttyAMA0 115200 vt100`
-
 2. Remove console error debugging from 
 `sudo vi /boot/cmdline.txt`
- 
 Remove:
-
 `console=ttyAMA0,115200 kgdboc=ttyAMA0,115200`
-
 From:
-
 `dwc_otg.lpm_enable=0 console=ttyAMA0,115200 kgdboc=ttyAMA0,115200 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 elevator=deadline rootwait`
-
 Leaving:
-
-`
-dwc_otg.lpm_enable=0 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 elevator=deadline rootwait
-`
+`dwc_otg.lpm_enable=0 console=tty1 root=/dev/mmcblk0p2 rootfstype=ext4 elevator=deadline rootwait`
 
 ##Done
+
+##Now test from Raspberry PI
+1. Reboot
+2. screen /dev/ttyAMA0
+
+If you don't have screen:
+`sudo apt-get install screen`
+
+Have Fun!
 
 
 The above information was derived from the following information is what I did following the directions at Hobby Tronics [RaspberryPi Serial Port Configuration](http://www.hobbytronics.co.uk/raspberry-pi-serial-port).
