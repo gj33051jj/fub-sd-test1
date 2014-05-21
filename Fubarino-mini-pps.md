@@ -39,7 +39,7 @@ mapPps(14, PPS_OUT_OC1);
 
 What combinations are valid? That's where (for now) you need to cross-reference the datasheet. Only certain functions can be mapped to certain pins - it's not an any-to-any type thing. So you have to look at the schematic of the Mini, find out the port name of the pin you're interested in, then look in the datasheet (table 11-1 for inputs, table 11-2 for outputs) to see if the function you want to use can be mapped to that pin. Then, look up what Arduino pin that port corresponds to, and put that into the mapPps() function. 
 
-On boot, the only things we map are the UARTs - the SPI pins, output compares, input captures, etc. all alone. So users will need to do mapPps() before they can use any of that.
+On boot, the only things we map are the UARTs - the SPI pins, output compares, input captures, etc. are all left alone. So users will need to do mapPps() before they can use any of that.
 
 
 Example PPS Sketch
