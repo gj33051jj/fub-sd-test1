@@ -32,8 +32,8 @@ NOTE (From the ChipKit Wiki):
 | SPI Pin | SPI Label| Arduino Uno Pin|
 |:---:|:----:|:---:|
 |24|SCK, SCLK, CLK| 13| 
-|25|SDI, MOSI| 11|
-|26|SDO, MISO| 12|
+|25|SDI, MISO| 11|
+|26|SDO, MOSI| 12|
 |27|SS, CS| 10|
 
 
