@@ -2,8 +2,6 @@
 ## Firmata
 [Firmata Website](http://www.firmata.org)
 
-## John-Five compatiblity :-)
-[Jounny-Five](https://github.com/rwaldron/johnny-five)
 ## Board Details
 ## Fubarino SD 
 Fubarino SD board added to boards.h
