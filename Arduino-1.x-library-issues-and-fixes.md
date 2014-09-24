@@ -1,4 +1,4 @@
-Arduino 1.x library issues and fixes
+Arduino 1.x library issues and fixes (These and more are now in the chipKIT master branch)
 ====
 
 pgmspace.h: http://www.arduino.cc/en/Reference/PROGMEM
