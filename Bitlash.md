@@ -1,4 +1,4 @@
-# Using Bitlash with the Fubarion Boards
+# Using Bitlash with the Fubarino Boards
 
 ## What is Bitlash?
 [http://bitlash.net/](http://bitlash.net/)
