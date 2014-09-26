@@ -6,6 +6,33 @@
 
 ## create a new node.js project
 * create the package.json file
+```
+{
+  "name": "fubarino-io-examples",
+  "version": "3.0.0",
+  "description": "Provides a standard interface to boards capable of IO (e.g. chipKIT, Arduinos, Maestros, Raspberry Pis, etc) and their firmware",
+  "main": "lib/ioboard.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ricklon/fubarino-io.git"
+  },
+  "dependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-nodeunit": "~0.4.1",
+    "grunt-contrib-uglify": "~0.5.0",
+    "johnny-five":"latest"
+  },
+  "keywords": [
+    "node",
+    "firmata",
+    "fubarino-oi"
+  ],
+  "author": "Rick Anderson",
+  "license": "BSD",
+  "readmeFilename": "Readme.md"
+}
+```
 * Update the dependencies to include:
 ** fubarino-io
 ** johnny-five
