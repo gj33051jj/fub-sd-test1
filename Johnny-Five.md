@@ -34,9 +34,6 @@
   "readmeFilename": "Readme.md"
 }
 ```
-* Update the dependencies to include:
-** fubarino-io
-** johnny-five
 
 * Do: ```npm install```
 
