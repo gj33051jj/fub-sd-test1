@@ -21,12 +21,13 @@
     "grunt-contrib-jshint": "~0.10.0",
     "grunt-contrib-nodeunit": "~0.4.1",
     "grunt-contrib-uglify": "~0.5.0",
-    "johnny-five":"latest"
+    "johnny-five":"latest",
+    "fubarino-io":"latest"
   },
   "keywords": [
     "node",
     "firmata",
-    "fubarino-oi"
+    "fubarino-io"
   ],
   "author": "Rick Anderson",
   "license": "BSD",
