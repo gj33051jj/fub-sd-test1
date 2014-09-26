@@ -55,9 +55,7 @@ board.on("ready", function() {
 ```
 * run ```node blink.js```
 
-## TODO: Create IO Plugin for Fubarino Boards
-* Clone https://github.com/achingbrain/node-ioboard
-* Modify into fubarino-io and chipKIT-io
+
 
 
 
