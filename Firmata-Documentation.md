@@ -18,7 +18,7 @@ Fubarino SD board added to boards.h
 #define IS_PIN_SERVO(p) ((p) >= 0 && (p) < MAX_SERVOS)
 #define IS_PIN_I2C(p) ((p) == 1 || (p) == 2)
 #define PIN_TO_DIGITAL(p) (p)
-#define PIN_TO_ANALOG(p) (p)
+#define PIN_TO_ANALOG(p)        (((p)<=44)?(p)-30:(p)-44)
 #define PIN_TO_PWM(p) PIN_TO_DIGITAL(p)
 #define PIN_TO_SERVO(p) (p)
 ```
