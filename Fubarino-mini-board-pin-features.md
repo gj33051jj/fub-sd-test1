@@ -3,16 +3,39 @@
 
 ##Serial Options
 * USB serial init: Serial.begin()
-* UART1: On board serial1 pins 17rx, 18tx: Serial0.begin()
-* UART2: On board serial2 pins 26rx, 25tx: Serial1.begin()
+* UART1: On board serial1 pins 17tx, 18rx: Serial0.begin()
+* UART2: On board serial2 pins 26tx, 25rx: Serial1.begin()
 
-_In the manual, RX and TX are reverse from this._
-In Boards_def.h, there is:
-#define	_SER0_TX_OUT	PPS_OUT_U1TX
-#define	_SER0_TX_PIN	17
-#define	_SER0_RX_IN		PPS_IN_U1RX
-#define	_SER0_RX_PIN	18
-_The manual seems to be OK and above seems to be false!_
+Here is a short sketch showing all three serial ports in use:
+	
+    int inByte = 0;
+    void setup()
+    {
+      Serial.begin(115200);
+      Serial0.begin(115200);
+      Serial1.begin(115200);
+    }
+
+    void loop()
+    {
+      Serial.print("USB\n");
+      Serial0.print("0\n");
+      Serial1.print("1\n");
+      if (Serial.available() > 0) {
+        inByte = Serial.read();
+        Serial.print(inByte, DEC);
+      }
+      if (Serial0.available() > 0) {
+        inByte = Serial0.read();
+        Serial0.print(inByte, DEC);
+      }
+      if (Serial1.available() > 0) {
+        inByte = Serial1.read();
+        Serial1.print(inByte, DEC);
+      }
+      delay(250);
+    }
+
 
 ##PRG Button
 * PIN_BTN1 defined as pin 16
