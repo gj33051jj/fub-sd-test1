@@ -51,4 +51,26 @@ NOTE (From the ChipKit Wiki):
 The SPI interface on AVR microcontrollers uses four signals labeled SS (slave select), MISO (master in/slave out), MOSI (master out/slave in) and SCK (serial clock). On AVR microcontrollers, MISO and MOSI switch direction depending on whether the SPI controller is enabled in master mode or slave mode.
 
 ##PWM Pins
-* Still Verifying, need to confirm the default pins are 4,7,8,9,10
+* The default pins are 0,4,7,8,9
+
+This sample sketch shows all five of the PWM outputs running:
+
+    void setup()  {
+    } 
+    
+    int x = 0;
+    
+    void loop()  { 
+      analogWrite(0, x);
+      analogWrite(4, x);
+      analogWrite(7, x);
+      analogWrite(8, x);
+      analogWrite(9, x);
+      delay(100);
+      x = x + 8;
+      if (x > 255) {
+        x = 0;
+      }
+    }
+
+Note that like most other digital type functions, these default pins can be re-mapped using PPS calls.
