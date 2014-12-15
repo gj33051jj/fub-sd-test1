@@ -36,7 +36,6 @@ Here is a short sketch showing all three serial ports in use:
       delay(250);
     }
 
-
 ##PRG Button
 * PIN_BTN1 defined as pin 16
 * PIN_BTN1 is labeled the PRG Button
@@ -46,32 +45,51 @@ Here is a short sketch showing all three serial ports in use:
 * PIN_LED1 defined as pin 1 
 * To enable: `pinMode(PIN_LED1, OUTPUT);`
 
-
 ##I2C
 * Pins 9, 10
 * Pins 26, 25 //Shared with UART2
-
 
 ##PPS Peripheral Pin Select
 
 The PIC32MX250 part used on Fubarino Mini has a Peripheral Pin Select function for almost all of its I/O pins. When writing sketches for the Fubarino Mini, you must remember to connect an internal peripheral (like SPI or UART) to a particular set of I/O pins using the PPS functions (ppsInputSelect() and ppsOutputSelect()) before trying to use the peripheral. [See the example code on the Fubarino Mini Github site for more detailed information.](Fubarino-Mini-pps)
 
-
 *Pins 0, 3-16, 17-32
 
-##SPI: Still verifying the default
-* The SPI pins are: 24, 25, 26, 27
-* 24: SCK, 25: SDI(Serial Data In), 26: SDO (Serial Data Out), 27: SS
-NOTE (From the ChipKit Wiki):
+##SPI
+* The SPI2 pins are: 4 (SCK2), 27 (SDI2), 29 (SDO2), 30 (SS2)
+* The SPI1 pins are: 3 (SCK1), 19 (SDI1), 18 (SDI1), 17 (SS1) 
+
+Note that SPI2 is the 'default' SPI port, and is what is used with the Arduino SPI.h library.
 
 |Mini SPI| SD SPI Pin | SPI Label| Arduino Uno Pin|
 |:--:|:---:|:----:|:---:|
-|24|24|SCK, SCLK, CLK| 13| 
-|26|25|SDI, MOSI| 11|
-|25|26|SDO, MISO| 12|
-|27|27|SS, CS| 10|
+|4|24|SCK, SCLK, CLK| 13| 
+|29|25|SDO, MOSI| 11|
+|27|26|SDI, MISO| 12|
+|30|27|SS, CS| 10|
 
-The SPI interface on AVR microcontrollers uses four signals labeled SS (slave select), MISO (master in/slave out), MOSI (master out/slave in) and SCK (serial clock). On AVR microcontrollers, MISO and MOSI switch direction depending on whether the SPI controller is enabled in master mode or slave mode.
+Here is a simple sketch showing a simple SPI loopback test for the default SPI port:
+
+    // SPI Loopback test - connect MISO and MOSI
+    #include <SPI.h>
+
+    const int slaveSelectPin = 30;
+    char x;
+
+    void setup() {
+      Serial.begin(115200);
+      delay(5000);
+      pinMode (slaveSelectPin, OUTPUT);
+      SPI.begin(); 
+    }
+
+    void loop() {
+      digitalWrite(slaveSelectPin,LOW);
+      Serial.println(SPI.transfer(x), DEC);
+      digitalWrite(slaveSelectPin,HIGH); 
+      delay(250);
+      x++;
+    }
 
 ##PWM Pins
 * The default pins are 0,4,7,8,9
