@@ -115,3 +115,82 @@ This sample sketch shows all five of the PWM outputs running:
     }
 
 Note that like most other digital type functions, these default pins can be re-mapped using PPS calls.
+
+##Interrupts
+
+* The Fubarino Mini has hardware interrupts on pins 24 (non-PPS), 3 (PPS), 0 (PPS), 6 (PPS) and 4 (PPS)
+* Pin 24 is INT0, Pin 3 is INT1, Pin 0 is INT2, Pin 6 is INT3 and Pin 4 is INT5
+
+Here is a sketch showing how to use these interrupts. 
+
+	// Move a wire from pin 12 to each of the hardware interrupt pins to show that
+	// they print out the proper message.
+	#define pinSrc 12 // used as external interrupt stimulator
+
+	void int0Handle();
+	void int1Handle();
+	void int2Handle();
+	void int3Handle();
+	void int4Handle();
+
+	int x;
+
+	void setup() 
+	{
+	  
+	  Serial.begin(9600);              // Turn on UART to pi
+	  digitalWrite(PIN_LED1, LOW);      // Start of with LED off
+	  pinMode(PIN_LED1, OUTPUT);        // Make LED pin an output
+	  pinMode(PIN_INT0, INPUT);         // Interrupt pin must be an input
+	  pinMode(PIN_INT1, INPUT);         // Interrupt pin must be an input
+	  pinMode(PIN_INT2, INPUT);         // Interrupt pin must be an input
+	  pinMode(PIN_INT3, INPUT);         // Interrupt pin must be an input
+	  pinMode(PIN_INT4, INPUT);         // Interrupt pin must be an input
+	  digitalWrite(pinSrc, LOW);        // Simulator pin must start low
+	  pinMode(pinSrc, OUTPUT);          // And stim pin must be output too
+	  attachInterrupt(0, int0Handle, RISING); // Register interrupt function on Int0
+	  attachInterrupt(1, int1Handle, RISING); // Register interrupt function on Int1
+	  attachInterrupt(2, int2Handle, RISING); // Register interrupt function on Int2
+	  attachInterrupt(3, int3Handle, RISING); // Register interrupt function on Int3
+	  attachInterrupt(4, int4Handle, RISING); // Register interrupt function on Int4
+	}
+
+	void loop() 
+	{
+	   digitalWrite(pinSrc, HIGH);      // Set stim pin high (triggers interrupt)
+	   delay(1000);                      // wait half a second
+	   Serial.println("Main loop tick");
+	   digitalWrite(pinSrc, LOW);       // Set stim pin low
+	   delay(1000);                      // wait another half second
+	}
+
+	// This function gets called when an external interrupt occurs
+	void int0Handle() 
+	{
+	  digitalWrite(PIN_LED1, !digitalRead(PIN_LED1));
+	  Serial.println("int0Handler() triggered");
+	}
+
+	void int1Handle() 
+	{
+	  digitalWrite(PIN_LED1, !digitalRead(PIN_LED1));
+	  Serial.println("int1Handler() triggered");
+	}
+
+	void int2Handle() 
+	{
+	  digitalWrite(PIN_LED1, !digitalRead(PIN_LED1));
+	  Serial.println("int2Handler() triggered");
+	}
+
+	void int3Handle() 
+	{
+	  digitalWrite(PIN_LED1, !digitalRead(PIN_LED1));
+	  Serial.println("int3Handler() triggered");
+	}
+
+	void int4Handle() 
+	{
+	  digitalWrite(PIN_LED1, !digitalRead(PIN_LED1));
+	  Serial.println("int4Handler() triggered");
+	}
