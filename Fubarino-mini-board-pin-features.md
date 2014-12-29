@@ -46,8 +46,13 @@ Here is a short sketch showing all three serial ports in use:
 * To enable: `pinMode(PIN_LED1, OUTPUT);`
 
 ##I2C
-* Pins 9, 10
-* Pins 26, 25 //Shared with UART2
+The default I2C pins for the Wire library are pins 25 and 26.
+
+* SCL: 25
+* SDA: 26
+
+There is a second I2C channel available on pins 9 and 10 but no library support at the moment.
+
 
 ##PPS Peripheral Pin Select
 
