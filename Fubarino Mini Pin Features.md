@@ -1,4 +1,4 @@
-#Fubarino Mini Board Features
+#Fubarino Mini :: Pin Features
 ====
 
 ##Serial Options
