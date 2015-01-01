@@ -53,13 +53,6 @@ The default I2C pins for the Wire library are pins 25 and 26.
 
 There is a second I2C channel available on pins 9 and 10 but no library support at the moment.
 
-
-##PPS Peripheral Pin Select
-
-The PIC32MX250 part used on Fubarino Mini has a Peripheral Pin Select function for almost all of its I/O pins. When writing sketches for the Fubarino Mini, you must remember to connect an internal peripheral (like SPI or UART) to a particular set of I/O pins using the PPS functions (ppsInputSelect() and ppsOutputSelect()) before trying to use the peripheral. [See the example code on the Fubarino Mini Github site for more detailed information.](Fubarino-Mini-pps)
-
-*Pins 0, 3-16, 17-32
-
 ##SPI
 * The SPI2 pins are: 4 (SCK2), 27 (SDI2), 29 (SDO2), 30 (SS2)
 * The SPI1 pins are: 3 (SCK1), 19 (SDI1), 18 (SDI1), 17 (SS1) 
@@ -199,3 +192,9 @@ Here is a sketch showing how to use these interrupts.
 	  digitalWrite(PIN_LED1, !digitalRead(PIN_LED1));
 	  Serial.println("int4Handler() triggered");
 	}
+
+##PPS Peripheral Pin Select
+
+The PIC32MX250 part used on Fubarino Mini has a Peripheral Pin Select function for almost all of its digital I/O pins. When writing sketches for the Fubarino Mini, you have two choices. You can use the default PPS mappings of the peripheral pins (as listed in the above sections), or, if you want to change the PPS mapping for a pin r peripheral, you will need to add your own calls to the PPS mapping system to change from the default mappings. This is done using the PPS functions (ppsInputSelect() and ppsOutputSelect()) before trying to use the peripheral. [See the example code on the Fubarino Mini Github site for more detailed information.](Fubarino-Mini-pps)
+
+*Pins 0, 3-16, 17-32
