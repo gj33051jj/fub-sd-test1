@@ -1,6 +1,7 @@
 # Fubarino Wiki all things fubar
 ====
-* [Manual] (https://github.com/fubarino/fubarino.github.com/blob/master/sd/docs/FubarinoSDURefManual.pdf)
+* [Fubarino SD Manual] (https://github.com/fubarino/fubarino.github.com/blob/master/sd/docs/FubarinoSDURefManual.pdf)
+* [Fubarino Mini Manual](https://github.com/fubarino/fubarino.github.com/blob/master/mini/docs/FubarinoMiniUserRefManual.pdf)
 * [Road Map] (wiki/Road-Map)
 * [Issue Tracking](https://github.com/fubarino/fubarino/issues) 
 * [How do I] (wiki/How-do-I)
