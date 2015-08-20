@@ -1,7 +1,7 @@
 BLE Shield for chipKIT
 
 
-Feature  | Fubarino SD pin | Fubarino Mini pin
+Feature | shield | Fubarino SD pin | Fubarino Mini pin
 ------- | ------- | -----
 rx | 0 | 8 | 18 |
 tx  | 1 | 9 | 17 | 
