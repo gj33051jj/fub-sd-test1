@@ -20,14 +20,17 @@ char incoming = 0;
 
 void setup ()
 {
+  //wake_sw
   pinMode(4,OUTPUT);
   digitalWrite(4,HIGH);
+  //wake_hw
   pinMode(7,OUTPUT);
   digitalWrite(7,HIGH);
+  //cmd_mldp
   pinMode(8,OUTPUT);
   digitalWrite(8,HIGH);
   delay(800);
-  Serial.begin(115200);
+  Serial0.begin(115200);
   Serial1.begin(115200);
   delay(200);
   Serial1.print("+\n");
