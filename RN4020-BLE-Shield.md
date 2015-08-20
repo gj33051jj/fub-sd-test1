@@ -15,20 +15,25 @@ Code Example
 ---
 
 ```
+#define WAKE_SW 11
+#define WAKE_HW 12
+#define CMD_MLPD 13
+
 String inputString ="";
 char incoming = 0;
 
 void setup ()
 {
   //wake_sw
-  pinMode(4,OUTPUT);
-  digitalWrite(4,HIGH);
+  pinMode( WAKE_SW,OUTPUT);
+  digitalWrite( WAKE_SW,HIGH);
   //wake_hw
-  pinMode(7,OUTPUT);
-  digitalWrite(7,HIGH);
+  pinMode(WAKE_HW,OUTPUT);
+  digitalWrite(WAKE_HW,HIGH);
   //cmd_mldp
-  pinMode(8,OUTPUT);
-  digitalWrite(8,HIGH);
+  pinMode(CMD_MLPD,OUTPUT);
+  digitalWrite(CMD_MLPD,HIGH);
+
   delay(800);
   Serial0.begin(115200);
   Serial1.begin(115200);
