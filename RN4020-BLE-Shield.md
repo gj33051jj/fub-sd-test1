@@ -62,7 +62,7 @@ void loop ()
       inputString += String(incoming);
       delay(6);
     }
-    Serial.print("Received: " + inputString+"\n");
+    Serial0.print("Received: " + inputString+"\n");
     Serial1.print("Received: " + inputString+"\n");
     delay(100);
     inputString ="";
