@@ -3,8 +3,8 @@ BLE Shield for chipKIT
 
 Feature  | Fubarino SD pin | Fubarino Mini pin
 ------- | ------- | -----
-rx  0 | 8 | 18 |
-tx  1 | 9 | 17 | 
+rx | 0 | 8 | 18 |
+tx  | 1 | 9 | 17 | 
 wake_sw | 7 | 11 | 11
 wake_hw | 8 | 12 | 12
 cmd_mldp //command vs data? | 4 | 13 | 13
