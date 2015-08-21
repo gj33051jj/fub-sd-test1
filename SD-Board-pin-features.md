@@ -40,12 +40,14 @@ SPI default 0
 
 SPI1 default 1
 
+//on board mx795 SPI3
+
 | SPI Pin | SPI Label| 
 |:---:|:----:|:---:|
-|24|SCK, SCLK, CLK|  
-|25|SDI, MISO| 
-|26|SDO, MOSI| 
-|27|SS, CS|
+|7|SCK, SCLK, CLK|  
+|8|SDI, MISO| 
+|9|SDO, MOSI| 
+|1|SS, CS|
 
 SPI2 //todo
 SPI3 //todo  
