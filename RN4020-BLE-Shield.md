@@ -12,13 +12,30 @@ Access the device from Android
 ----
 [MLDP Terminal bluetooth viewer](ww1.microchip.com/downloads/en/DeviceDoc/MLDPTerminal8.apk  )
 
-Feature | shield | Fubarino SD pin | Fubarino Mini pin
+
+Pin Mappings for Fubarino Boards
+----
+
+Feature | shield/uc32 pin | Fubarino SD pin | Fubarino Mini pin
 ------- | ----- | ------- | -----
 rx | 0 | 8 | 18 |
 tx  | 1 | 9 | 17 | 
+cmd_mldp //command vs data? | 4 | 12 | 13
 wake_sw | 7 | 10 | 11
 wake_hw | 8 | 11 | 12
-cmd_mldp //command vs data? | 4 | 12 | 13
+MOSFET gate pin | 34 |||
+MOSFET gate pin | 35 |||
+MOSFET gate pin | 36 |||
+MOSFET gate pin | 37 |||
+MOSFET gate pin | 38 |||
+rx | 39 |||
+tx | 40 |||
+A0 ||||
+A1 ||||
+A2 ||||
+
+
+
 more pins | //optional
 
 
