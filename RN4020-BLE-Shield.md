@@ -1,5 +1,16 @@
 BLE Shield for chipKIT
 
+What is the shield?
+----
+It is a break out board for the RN4020 BLE device from Microchip. It has several features like mosfets on board which are broken out and can be used from the shield.
+
+RN4070 Commands and Details
+----
+[RN4020 Data Sheet](http://ww1.microchip.com/downloads/en/DeviceDoc/70005191B.pdf)
+
+Access the device from Android
+----
+[MLDP Terminal bluetooth viewer](ww1.microchip.com/downloads/en/DeviceDoc/MLDPTerminal8.apk  )
 
 Feature | shield | Fubarino SD pin | Fubarino Mini pin
 ------- | ----- | ------- | -----
