@@ -28,7 +28,9 @@ The pins are 1,2 and 29,28
 * The SPI pins are: 24, 25, 26, 27
 * 24: SCK, 25: SDI(Serial Data In), 26: SDO (Serial Data Out), 27: SS
 NOTE (From the ChipKit Wiki):
+
 SPI default 0
+
 | SPI Pin | SPI Label| Arduino Uno Pin|
 |:---:|:----:|:---:|
 |24|SCK, SCLK, CLK| 13| 
