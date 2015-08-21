@@ -36,9 +36,6 @@ A2 ||||
 
 
 
-more pins | //optional
-
-
 Code Example
 ---
 
