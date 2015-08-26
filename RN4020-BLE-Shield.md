@@ -40,24 +40,32 @@ Code Example
 ---
 
 ```
+/*
+  chipKIT BLE shield Simlpe serial and echo
+
+*/
+
 #define WAKE_SW 10
 #define WAKE_HW 11
 #define CMD_MLPD 12
+#define MAX_INPUT 200
 
-String inputString ="";
-char incoming = 0;
 
-void setup ()
-{
+String inputString = "";
+char incomingByte = 0;
+String commandString = "";
+char cmdByte = 0;
+
+void setup() {
   //wake_sw
-  pinMode( WAKE_SW,OUTPUT);
-  digitalWrite( WAKE_SW,HIGH);
+  pinMode( WAKE_SW, OUTPUT);
+  digitalWrite( WAKE_SW, HIGH);
   //wake_hw
-  pinMode(WAKE_HW,OUTPUT);
-  digitalWrite(WAKE_HW,HIGH);
+  pinMode(WAKE_HW, OUTPUT);
+  digitalWrite(WAKE_HW, HIGH);
   //cmd_mldp
-  pinMode(CMD_MLPD,OUTPUT);
-  digitalWrite(CMD_MLPD,HIGH);
+  pinMode(CMD_MLPD, OUTPUT);
+  digitalWrite(CMD_MLPD, HIGH);
 
   delay(800);
 
@@ -67,15 +75,24 @@ void setup ()
 
   while (1)
   {
-    if (Serial.available() > 0) 
+    if (Serial.available() > 0)
     {
       char cc = Serial.read();
-      if (cc == 'h' || cc=='?') {
+      if (cc == 'h' || cc == '?' || cc == '\n' || cc == '\r') {
         Serial.println("Press 's' to start.");
+        Serial.println("Sample Commands:");
+        Serial.println("'D Dump'");
+        Serial.println("'SN,<string> set device name'");
+        Serial.println("'LS List Server Services'");
+        Serial.println("'LC List Client Services'");
+        Serial.println("'M Last Signal Strength'");
+        Serial.println("'R,1 Reboot'");
+        Serial.println("'V Version'");
+        Serial.println("'H Help'");
       }
       if (cc == 's') {
         break;
-      } 
+      }
     }
   }
   Serial.println("start");
@@ -88,44 +105,44 @@ void setup ()
   delay(500);
   Serial0.print("SS,30000000\n");
   delay(500);
-  Serial0.print("SR,32000800\n"); 
+  Serial0.print("SR,32000800\n");
   delay(500);
-  Serial0.print("SN,HEYBUDDY\n"); 
+  Serial0.print("SN,HEYBUDDY\n");
   delay(500);
   Serial0.print("SB,4\n");
   delay(500);
   Serial0.print("R,1\n");
   delay(2000);
-  Serial.print("setup: ");
-
 }
 
-void loop ()
-{
-  Serial.print("REC: ");
-  if(Serial0.available()>0)
-  {
-    while(Serial0.available()>0)
+void loop() {
+  if (Serial.available() > 0) {
+    cmdByte = Serial.read();
+    commandString += String(cmdByte);
+
+    if (cmdByte == '\n' || cmdByte == '\r')
     {
-      incoming = Serial0.read();
-      inputString += String(incoming);
-      delay(6);
+      Serial.print("cmd: ");
+      Serial.println(commandString);
+      Serial0.print(commandString);
+      commandString = "";
     }
-    Serial.print("Received: " + inputString+"\n");
-    //Serial0.print("Received: " + inputString+"\n");
-    delay(100);
-    inputString ="";
   }
-  delay(200);
-  Serial0.print("D\n");
-  delay(800);
-  Serial0.print("+\n");
-  delay(800);
-  Serial0.print("V\n");
-  delay(1000);
-  
+  //read from ble device blocking or non blocking
+  if (Serial0.available() > 0)
+  {
+
+    incomingByte = Serial0.read();
+    inputString += String(incomingByte);
+
+    if (incomingByte == '\n' || incomingByte == '\r')
+    {
+      //Serial.print("resp: ");
+      Serial.print(inputString);
+      inputString = "";
+    }
+  }
+
 }
-
-
 ```
 
