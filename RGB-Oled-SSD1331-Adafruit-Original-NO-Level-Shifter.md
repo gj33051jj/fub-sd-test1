@@ -6,6 +6,13 @@ Product From Adafruit:
 Original Tutorial From Adafruit:
 [https://learn.adafruit.com/096-mini-color-oled/wiring](https://learn.adafruit.com/096-mini-color-oled/wiring)
 
+The code depends on the GLFX Library from Adafruit which can be found in the Arduino library manager or directly here:
+https://github.com/adafruit/Adafruit-GFX-Library
+
+This modified Adafruit-SSD1331-OLED-Driver-Library-for-Arduino
+ library allows for PIC32 hardware SPI support:
+https://github.com/ricklon/Adafruit-SSD1331-OLED-Driver-Library-for-Arduino
+
 Mapping for the Fubarino Mini then Fubarino SD
 
 SSD1331 | Fubarino Mini | Fubarino SD | Arduino Uno
