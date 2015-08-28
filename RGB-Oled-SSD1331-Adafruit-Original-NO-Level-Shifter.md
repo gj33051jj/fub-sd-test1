@@ -19,7 +19,7 @@ Pin | SSD1331 | Fubarino Mini | Fubarino SD | Arduino Uno
 --- |----- | ----- | ----- | -----
 1 | GND | GND | GND | GND
 2 | 3.3v | 3.3v  | 3.3v | 3.3v //issue Uno needs level shifter
-3 | SD CS | `27` | | `[SD 4]`
+3 | SD CS | `19` | | `[SD 4]`
 4 | OLED CS | 30 | 27 | 10 //SS/CS
 5 | OLED Reset | 9 | 9 | 9 //digital
 6| OLED D/C | 8 | 8 | 8 //digital
