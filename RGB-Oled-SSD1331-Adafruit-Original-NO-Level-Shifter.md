@@ -25,5 +25,5 @@ Pin | SSD1331 | Fubarino Mini | Fubarino SD | Arduino Uno
 6| OLED D/C | 8 | 8 | 8 //digital
 7 | OLED SCLK | 4 | 24 | 13 //SCK
 8 | OLED Data | 29 | 25 | 11 //SDO/Mosi
-9 | SD Out | `24` | | `[SD 12] MISO`
+9 | SD Out | `28` MISO | | `[SD 12] MISO`
 10 | SD Detect | `23` | | `[SD pulls low]`
