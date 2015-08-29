@@ -1,6 +1,6 @@
 # Fubarino Mini with the LidarLite v1
 
-Product From Pulsed Light3d: http://www.adafruit.com/products/254
+Product From Pulsed Light3d specs: http://kb.pulsedlight3d.com/support/solutions/articles/5000548616-lidar-lite-specifications
 
 Support page: http://kb.pulsedlight3d.com/support/home
 
