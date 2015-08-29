@@ -36,9 +36,19 @@ A2 ||||
 
 
 
-Code Example
+Code Examples
 ---
 
+rn4020bleExplorer
+---
+rn4020bleExplorer: 
+https://github.com/ricklon/rn4020bleExplorer
+* Store configuration profiles in 1-9 slots.
+* Default start. Starts with no config changes. So those stored will remain.
+
+Standard Serial Access
+---
+Default config from original configuration example
 ```
 /*
   chipKIT BLE shield Simlpe serial and echo
