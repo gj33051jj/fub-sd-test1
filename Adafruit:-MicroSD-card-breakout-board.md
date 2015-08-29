@@ -8,7 +8,7 @@ Mapping for the Fubarino Mini: SPI
 
 Pin | Label | Fubarino Mini | Uno
 ---- | ---- | ---- | ----
-1 | CD || CardDetect -> any digital pin
+1 | CD | 23 | CardDetect -> any digital pin
 2 | < CS | 30 | 10
 3 | < DI | 29 | 11
 4 | > DO | 27 | 12
