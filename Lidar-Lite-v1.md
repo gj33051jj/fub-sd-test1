@@ -8,11 +8,11 @@ Quick start: http://kb.pulsedlight3d.com/support/solutions/articles/5000548624-q
 
 Mapping for the Fubarino Mini: SPI
 
-Pin | Label | Fubarino Mini | Fubarino SD | Uno
+Pin | Label | Fubarino Mini | Fubarino SD | 
 ---- | ---- | ---- | ---- | ----
-1 | GND | | |
-2 | SDA | |  |
-3 | SCL  | | | 
+1 | GND | GND| |
+2 | SDA | 26 | 1 |
+3 | SCL  | 25 | 2 | 
 4 | MODE| | |
 5 | PWR EN| |  |
-6 | 5v | | |
+6 | 5v | Vout| Vout|
