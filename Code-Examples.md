@@ -205,3 +205,47 @@ void loop() {
   delay(1000);
 }
 ```
+
+* Simple hardware SPI library demonstration
+
+``` C
+// SPI Loopback test - connect MISO and MOSI
+// If you see incrementing numbers on the serial
+// output then you know the SPI port is working
+// and MISO and MISO are connected together.
+// Watch the Slave Select Pin and the CLK
+// pin with a logic anayzler or oscilloscope to
+// see them working too.
+//
+// FubarinoMini Pins for hardware SPI library:
+// SS (slave select) - just a GPIO defined in sketch - 9
+// MISO (SDI) - 27
+// MOSI (SDO) - 29
+// SCK (clock) - 4
+//
+// FubarinoSD Pins for harwdare SPI library:
+// SS (slave select) - just a GPIO defined in sketch - 9
+// MISO (SDI)  - 25
+// MOSI (SDO)  - 26
+// SCK (clock) - 24
+
+#include <SPI.h>
+
+const int slaveSelectPin = 9;
+char x;
+
+void setup() {
+  Serial.begin(115200);
+  delay(5000);
+  pinMode (slaveSelectPin, OUTPUT);
+  SPI.begin(); 
+}
+
+void loop() {
+  digitalWrite(slaveSelectPin,LOW);
+  Serial.println(SPI.transfer(x), DEC);
+  digitalWrite(slaveSelectPin,HIGH); 
+  delay(250);
+  x++;
+}
+```
