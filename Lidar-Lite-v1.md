@@ -10,7 +10,7 @@ Mapping for the Fubarino Mini: SPI
 
 Pin | Label | Fubarino Mini | Fubarino SD | 
 ---- | ---- | ---- | ---- | ----
-1 | GND | GND| |
+1 | GND | GND| GND |
 2 | SDA | 26 | 1 |
 3 | SCL  | 25 | 2 | 
 4 | MODE| | |
