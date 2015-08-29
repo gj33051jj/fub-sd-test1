@@ -10,9 +10,9 @@ Mapping for the Fubarino Mini: SPI
 
 Pin | Label | Fubarino Mini | Fubarino SD | Uno
 ---- | ---- | ---- | ---- | ----
-1 |  | | |
-2 |  | |  |
-3 |  | | | 
-4 | | | |
-5 | | |  |
-6 | | | |
+1 | GND | | |
+2 | SDA | |  |
+3 | SCL  | | | 
+4 | MODE| | |
+5 | PWR EN| |  |
+6 | 5v | | |
