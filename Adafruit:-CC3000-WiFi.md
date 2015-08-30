@@ -11,8 +11,8 @@ Mapping for the Fubarino Mini and Fubarino SD
 Pin | Label | Fubarino Mini | SD | Uno
 ---- | ---- | ---- | ---- | ----
 1 | GND | GND | GND | GND
-2 | 3.3v | 3.3v | 3.3v | 3.3v
-3 |||| 
+2 | 3.3v | 3.3v | 3.3v | SKIP
+3 | SKIP | SKIP | SKIP | 5v 
 4 ||||
 5 |  | || 
 6 | | ||
