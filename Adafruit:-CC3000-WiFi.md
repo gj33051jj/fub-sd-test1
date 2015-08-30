@@ -15,7 +15,7 @@ Pin | Label | Fubarino Mini | SD | Uno
 3 | SKIP | SKIP | SKIP | 5v 
 4 | CLK | 4 | 24 | 13
 5 | MISO | 27 |26| 12
-6 | MOSI | 29 | 26 | 11
+6 | MOSI | 29 | 25 | 11
 7 | CS | 30 | 27 | 10 
 8 | VBEN | 5 | 5 | 5
 9 | IRQ | 3| 3 | 3
