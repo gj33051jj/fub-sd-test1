@@ -6,6 +6,13 @@ Tutorial CC3000 WiFi Breakout Board: https://learn.adafruit.com/adafruit-cc3000-
 
 Tutorial Software: https://learn.adafruit.com/adafruit-cc3000-wifi/cc3000-library-software
 
+Problem: ccspi.h/ccspi.cpp not supported by Teensy 3.0 and Due:
+```
+#else
+// TODO: ARM (Due, Teensy 3.0, etc)
+// #error platform not yet supported by Adafruit_CC3000
+
+```
 Mapping for the Fubarino Mini and Fubarino SD
 
 Pin | Label | Fubarino Mini | SD | Uno
