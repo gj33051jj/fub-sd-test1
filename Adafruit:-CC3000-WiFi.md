@@ -13,10 +13,10 @@ Pin | Label | Fubarino Mini | SD | Uno
 1 | GND | GND | GND | GND
 2 | 3.3v | 3.3v | 3.3v | SKIP
 3 | SKIP | SKIP | SKIP | 5v 
-4 ||||
-5 |  | || 
-6 | | ||
-7 ||  || 
-8 | | | 
-9 ||||
+4 | CLK |||
+5 | MISO | || 
+6 | MOSI | ||
+7 | CS |  || 
+8 | VBEN | | 
+9 | IRQ |||
 
